@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fontir</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #0d0d09;
+      color: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 46px 63px 40px;
+    }
+
+    .hero {
+      position: relative;
+      width: 520px;
+    }
+
+    .title {
+      font-size: 3.72rem;
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 0.94;
+      color: #ffffff;
+    }
+
+    .tagline {
+      margin-top: 12px;
+      font-size: 1.02rem;
+      font-weight: 400;
+      line-height: 1.15;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .inspector {
+      position: absolute;
+      top: 62px;
+      left: 294px;
+    }
+
+    .cursor {
+      position: absolute;
+      left: -19px;
+      top: -18px;
+      width: 18px;
+      height: 24px;
+      z-index: 2;
+    }
+
+    .font-tooltip {
+      width: 154px;
+      background: #d5d5d3;
+      border-radius: 5px;
+      padding: 9px 10px 10px;
+      text-align: left;
+    }
+
+    .font-tooltip__stack {
+      font-size: 10px;
+      font-weight: 700;
+      color: #000000;
+      line-height: 1.25;
+    }
+
+    .font-tooltip__meta {
+      margin-top: 5px;
+      font-size: 10px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.2;
+    }
+
+    .font-tooltip__hint {
+      margin-top: 6px;
+      font-size: 8px;
+      font-weight: 400;
+      color: #111111;
+      line-height: 1.2;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 9px 19px 10px;
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: #ffffff;
+      background-color: #ff5a00;
+      border: none;
+      border-radius: 9999px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .demo {
+      margin-top: auto;
+      align-self: center;
+      width: 100%;
+      max-width: min(920px, 100%);
+    }
+
+    .demo video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      background: #1a1a18;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <h1 class="title">Fontir</h1>
+      <p class="tagline">The frontier of shamelessly copying fonts</p>
+      <div class="inspector" aria-hidden="true">
+        <svg class="cursor" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            d="M1 1L1 17.5L5.5 13L9.5 20.5L11.5 19.5L7.5 12L13.5 12L1 1Z"
+            fill="white"
+            stroke="#1a1a1a"
+            stroke-width="1"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div class="font-tooltip">
+          <div class="font-tooltip__stack">CoolSans, Helvetica, Arial</div>
+          <div class="font-tooltip__meta">16px 500</div>
+          <div class="font-tooltip__hint">Double click to download</div>
+        </div>
+      </div>
+      <a class="cta" href="#">Download for Chrome</a>
+    </header>
+    <div class="demo">
+      <video autoplay muted loop playsinline aria-label="Fontir demo">
+        <source src="demo.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</body>
+</html>
